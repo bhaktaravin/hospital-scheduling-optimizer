@@ -152,6 +152,35 @@ uvicorn app.main:app --reload
 - Interactive Docs: `http://localhost:8000/docs`
 - ReDoc: `http://localhost:8000/redoc`
 
+### 🐳 Docker Setup (Recommended)
+
+Run the entire stack (backend + PostgreSQL) with Docker:
+
+```bash
+# Build and start all services
+docker-compose up --build
+
+# Run in detached mode
+docker-compose up -d
+
+# View logs
+docker-compose logs -f
+
+# Stop services
+docker-compose down
+
+# Stop and remove volumes (clean database)
+docker-compose down -v
+```
+
+Access the API at `http://localhost:8000/docs`
+
+**Docker Benefits:**
+- ✅ No need to install PostgreSQL locally
+- ✅ Consistent environment across machines
+- ✅ Easy to start/stop entire stack
+- ✅ Database persists between restarts
+
 ---
 
 ## 📡 API Endpoints
